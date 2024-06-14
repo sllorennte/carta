@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    var personas = [
+$(document).ready(function(){
+    var personas=[
         { id: 1, nombre: 'Alberto Rodríguez', descripcion: 'Arquitecto', imagen: 'https://img.freepik.com/fotos-premium/retrato-hombre-negocios-expresion-cara-seria-fondo-estudio-espacio-copia-bengala-persona-corporativa-enfoque-pensamiento-duda-mirada-facial-dilema-o-concentracion_590464-84924.jpg' },
         { id: 2, nombre: 'Jorge Martínez', descripcion: 'Programador', imagen: 'https://img.freepik.com/foto-gratis/disparo-cabeza-hombre-atractivo-sonriendo-complacido-mirando-intrigado-pie-sobre-fondo-azul_1258-65468.jpg' },
         { id: 3, nombre: 'Fernando Alonso', descripcion: 'Piloto de F1', imagen: 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2023/02/fernando-alonso-2955486.jpg?tf=3840x' },
@@ -48,17 +48,17 @@ $(document).ready(function() {
         filtrarPersonas(personas);
     });
 
-    $('#addButton').click(function() {
+    $('#addButton').click(function(){
         $('#agregar').toggle();
     });
 
-    $('#submitAdd').click(function() {
+    $('#submitAdd').click(function(){
         var nombre = $('#nombre').val();
         var descripcion = $('#descripcion').val();
         var imagen = $('#imagen').val();
         var id = personas.length ? personas[personas.length - 1].id + 1 : 1;
         
-        if (nombre && descripcion && imagen) {
+        if (nombre && descripcion && imagen){
             personas.push({ id, nombre, descripcion, imagen });
             filtrarPersonas(personas);
             $('#nombre').val('');
